@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Soham Jagani — Mechanical Design Portfolio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="sheet-tracker mono">
+<span>01</span>
+<div class="rule"></div>
+<span class="num" id="sheetNum">01</span>
+<div class="rule"></div>
+<span>05</span>
+</div>
+<nav>
+<div class="brand">SJ<strong>—</strong>DESIGN.LOG</div>
+<ul>
+<li><a href="#work">Work</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<section class="hero" id="top">
+<div class="crosshair tl"></div>
+<div class="crosshair tr"></div>
+<div class="crosshair bl"></div>
+<div class="crosshair br"></div>
+<div class="hero-inner">
+<div class="eyebrow"><span class="tick"></span>MECHANICAL DESIGN &amp; ANALYSIS PORTFOLIO</div>
+<h1>SOHAM<br/><span>JAGANI</span></h1>
+<p class="tagline">Mechanical engineering student building and analyzing hardware across CAD, FEA, and controls — from thermal system design to soft robotics. This is the drawing log.</p>
+<div class="title-block">
+<div class="tb-cell">
+<div class="tb-label">DRAWN BY</div>
+<div class="tb-value">S. Jagani</div>
+</div>
+<div class="tb-cell">
+<div class="tb-label">PROGRAM</div>
+<div class="tb-value">B.S. Mech. Eng. — NC State</div>
+</div>
+<div class="tb-cell">
+<div class="tb-label">STATUS</div>
+<div class="tb-value">Grad. May 2027</div>
+</div>
+<div class="tb-cell">
+<div class="tb-label">SHEET</div>
+<div class="tb-value">01 OF 05</div>
+</div>
+</div>
+</div>
+</section>
+<div class="dim-divider"><span class="arrow">├</span> SCROLL <span class="arrow">┤</span></div>
+<section id="work">
+<div class="section-head reveal">
+<span class="idx">§02</span>
+<h2>Selected Work</h2>
+<div class="rule"></div>
+</div>
+<div class="projects-grid">
+<div class="sheet reveal" onclick="window.location.href='projects/pendulum.html'" onkeydown="if(event.key==='Enter'||event.key===' ') window.location.href='projects/pendulum.html'" role="link" tabindex="0">
+<div class="sheet-thumb" style="height:240px;">
+<span class="rev-tag">REV FINAL</span>
+<img alt="Thruster-actuated arrow stabilized at the 180-degree setpoint on the Wheel of Despair test rig" src="images/projects/pendulum.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;"/>
+</div>
+<div class="sheet-body">
+<h3>PID Control of a Thruster-Actuated Inverted Pendulum</h3>
+<p>Modeled, linearized, and controlled a pneumatic thruster-driven arrow ("Wheel of Despair") — derived the nonlinear equations of motion, fit thruster and damping dynamics to test data, designed a Root-Locus-based PID controller in MATLAB, and validated it in Simulink and on the physical rig.</p>
+<a class="project-link" href="projects/pendulum.html">VIEW PROJECT →</a></div>
+<div class="sheet-specs">
+<div class="spec"><div class="spec-label">SOFTWARE</div><div class="spec-value">MATLAB, Simulink</div></div>
+<div class="spec"><div class="spec-label">DOMAIN</div><div class="spec-value">Controls</div></div>
+<div class="spec"><div class="spec-label">METHOD</div><div class="spec-value">PID, Root Locus</div></div>
+<div class="spec"><div class="spec-label">TYPE</div><div class="spec-value">Design + Hardware Test</div></div>
+</div>
+<div class="sheet-specs" style="border-top:none;">
+<div class="spec"><div class="spec-label">COURSE</div><div class="spec-value">MAE 435, Spring 2026</div></div>
+<div class="spec"><div class="spec-label">TEAM</div><div class="spec-value">4-person project</div></div>
+<div class="spec"><div class="spec-label">RESULT</div><div class="spec-value">0 s.s. error @ ±100°, 180°</div></div>
+<div class="spec"><div class="spec-label">SETTLING</div><div class="spec-value">4.5s (5% band)</div></div>
+</div>
+</div>
+<div class="sheet reveal" onclick="window.location.href='projects/soft-robotics.html'" onkeydown="if(event.key==='Enter'||event.key===' ') window.location.href='projects/soft-robotics.html'" role="link" tabindex="0">
+<div class="sheet-thumb">
+<span class="rev-tag">REV B</span>
+<svg fill="none" stroke="#5b93c9" stroke-width="1.2" viewbox="0 0 200 140">
+<path d="M40 40 C 20 70, 20 100, 50 110 C 80 120, 110 100, 100 70 C 92 46, 130 40, 150 60"></path>
+<circle cx="40" cy="40" fill="#5b93c9" r="4" stroke="none"></circle>
+<circle cx="150" cy="60" fill="#5b93c9" r="4" stroke="none"></circle>
+</svg>
+</div>
+<div class="sheet-body">
+<h3>Soft-Body Robotics Research</h3>
+<p>Research work on compliant, soft-bodied robotic mechanisms — modeling deformable geometry and actuation behavior for non-rigid systems.</p>
+<a class="project-link" href="projects/soft-robotics.html">VIEW PROJECT →</a></div>
+<div class="sheet-specs">
+<div class="spec"><div class="spec-label">SOFTWARE</div><div class="spec-value">SolidWorks, ANSYS</div></div>
+<div class="spec"><div class="spec-label">DOMAIN</div><div class="spec-value">Robotics</div></div>
+<div class="spec"><div class="spec-label">ROLE</div><div class="spec-value">Undergrad Research</div></div>
+<div class="spec"><div class="spec-label">TYPE</div><div class="spec-value">Research</div></div>
+</div>
+</div>
+<div class="placeholder-sheet reveal">
+<div class="plus">+</div>
+<div>NEXT SHEET<br/>Add a CAD render, FEA plot,<br/>or project write-up here</div>
+</div>
+</div>
+</section>
+<div class="dim-divider"><span class="arrow">├</span> CAPABILITIES <span class="arrow">┤</span></div>
+<section id="tools">
+<div class="section-head reveal">
+<span class="idx">§03</span>
+<h2>Software &amp; Tools</h2>
+<div class="rule"></div>
+</div>
+<div class="spec-table reveal">
+<div class="spec-row header">
+<div>TOOL</div><div>PROFICIENCY</div><div>APPLICATION</div>
+</div>
+<div class="spec-row">
+<div class="tool-name">SolidWorks</div>
+<div class="tool-level">ADVANCED<div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+<div>Part &amp; assembly modeling, drawings</div>
+</div>
+<div class="spec-row">
+<div class="tool-name">ANSYS</div>
+<div class="tool-level">PROFICIENT<div class="bar-track"><div class="bar-fill" style="width:75%"></div></div></div>
+<div>Structural &amp; thermal FEA</div>
+</div>
+<div class="spec-row">
+<div class="tool-name">MATLAB</div>
+<div class="tool-level">PROFICIENT<div class="bar-track"><div class="bar-fill" style="width:80%"></div></div></div>
+<div>Numerical analysis, controls</div>
+</div>
+<div class="spec-row">
+<div class="tool-name">Simulink</div>
+<div class="tool-level">PROFICIENT<div class="bar-track"><div class="bar-fill" style="width:78%"></div></div></div>
+<div>Dynamic system modeling</div>
+</div>
+<div class="spec-row">
+<div class="tool-name">AutoCAD</div>
+<div class="tool-level">WORKING<div class="bar-track"><div class="bar-fill" style="width:60%"></div></div></div>
+<div>2D drafting &amp; documentation</div>
+</div>
+</div>
+</section>
+<div class="dim-divider"><span class="arrow">├</span> BACKGROUND <span class="arrow">┤</span></div>
+<section id="about">
+<div class="section-head reveal">
+<span class="idx">§04</span>
+<h2>About</h2>
+<div class="rule"></div>
+</div>
+<div class="about-grid">
+<div class="reveal">
+<p>I'm <strong>Soham (John) Jagani</strong>, a mechanical engineering student at <strong>NC State University</strong>, graduating May 2027, with a minor in Business Administration.</p>
+<p>My work spans CAD modeling, FEA, and controls — from process engineering and project management internships to undergraduate research in soft-body robotics. I like problems that move between design and analysis: building a part, then proving it holds up.</p>
+<p>This page is a running log of that work, updated as new sheets get added to the set.</p>
+</div>
+<ul class="callout-list reveal">
+<li><span class="tag">EDU</span> B.S. Mechanical Engineering, NC State University — expected May 2027</li>
+<li><span class="tag">MINOR</span> Business Administration</li>
+<li><span class="tag">EXP</span> Process engineering &amp; project management internships</li>
+<li><span class="tag">RSCH</span> Undergraduate research, soft-body robotics</li>
+</ul>
+</div>
+</section>
+<footer id="contact">
+<div class="crosshair tl" style="opacity:0.35;"></div>
+<div class="crosshair tr" style="opacity:0.35;"></div>
+<h2 class="contact-title reveal">Let's build<br/>something.</h2>
+<div class="contact-links reveal">
+<a href="mailto:Jaganisoham@gmail.com">EMAIL →</a>
+<a href="www.linkedin.com/in/soham-jagani" rel="noopener noreferrer" target="_blank">LINKEDIN →</a>
+<a download="Soham_Jagani_Resume.pdf" href="resume/Soham_Jagani_Resume.pdf">RESUME (PDF) →</a>
+</div>
+<div class="footer-bottom">
+<span>SHEET 05 OF 05 — END OF SET</span>
+<span>© 2026 SOHAM JAGANI</span>
+</div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

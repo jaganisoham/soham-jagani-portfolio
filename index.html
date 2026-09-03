@@ -406,13 +406,8 @@
       linear-gradient(90deg,rgba(91,147,201,0.045) 1px,transparent 1px);
     background-size:16px 16px,16px 16px,64px 64px,64px 64px;
   }
-  body::before{
-    content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
-    background:
-      radial-gradient(circle at 87% 22%,transparent 0 118px,rgba(91,147,201,.045) 119px 120px,transparent 121px),
-      radial-gradient(circle at 9% 72%,transparent 0 78px,rgba(91,147,201,.035) 79px 80px,transparent 81px),
-      linear-gradient(90deg,transparent 49.96%,rgba(91,147,201,.025) 50%,transparent 50.04%);
-  }
+  /* Construction geometry now belongs to each section instead of following the viewport. */
+  body::before{display:none;}
   nav{background:rgba(18,21,26,.78);}
   .brand-state{display:inline-flex;align-items:center;gap:7px;color:var(--text-faint);font:10px 'JetBrains Mono',monospace;letter-spacing:.08em;}
   .brand-state i,.status-pill i{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px rgba(226,130,63,.5);}
@@ -444,6 +439,19 @@
   .project-code{position:absolute;left:15px;top:15px;z-index:3;color:rgba(232,230,225,.72);font:9px 'JetBrains Mono',monospace;letter-spacing:.12em;text-shadow:0 1px 3px #000;}
   .sheet-body{padding-top:24px;}
   .spec-value{line-height:1.35;}
+  .coming-soon{border-style:dashed;}
+  .coming-soon:hover{transform:none;border-color:var(--blueprint-dim);}
+  .coming-soon .sheet-thumb{
+    background:
+      radial-gradient(circle at 72% 48%,rgba(226,130,63,.08),transparent 31%),
+      linear-gradient(rgba(91,147,201,.045) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(91,147,201,.045) 1px,transparent 1px),
+      var(--bg);
+    background-size:auto,16px 16px,16px 16px,auto;
+  }
+  .coming-soon .sheet-thumb svg{width:88%;height:82%;opacity:.9;}
+  .coming-soon .sheet-thumb::after{content:'M∞  >  5  /  COMPRESSIBLE FLOW';}
+  .coming-note{padding:10px 22px;border-top:1px dashed var(--line-strong);color:var(--text-faint);font:9px 'JetBrains Mono',monospace;letter-spacing:.1em;}
   .cad-coordinates{position:fixed;left:18px;bottom:16px;z-index:30;pointer-events:none;color:var(--text-faint);font:9px 'JetBrains Mono',monospace;letter-spacing:.1em;mix-blend-mode:screen;}
   @media(max-width:900px){.hero-drafting{opacity:.18;right:-18%;width:85vw}.hero-copy{max-width:700px}.cad-coordinates{display:none;}}
   @media(max-width:700px){nav{padding:15px 18px}.brand-state{display:none}.hero{margin:7px;padding-left:7vw;padding-right:7vw}.tb-cell{padding-right:10px}.sheet-thumb{height:260px!important}.status-pill{font-size:8px}.project-code{display:none;}}
@@ -593,10 +601,42 @@
       </div>
     </a>
 
-    <div class="placeholder-sheet reveal">
-      <div class="plus">+</div>
-      <div>NEXT SHEET<br>Add a CAD render, FEA plot,<br>or project write-up here</div>
-    </div>
+    <article class="sheet reveal coming-soon" aria-label="Coming soon: Scramjet Engine ANSYS Analysis">
+      <div class="sheet-thumb">
+        <span class="project-code">CFD-004 / SUPERSONIC FLOW</span>
+        <span class="status-pill design"><i></i>COMING SOON</span>
+        <svg viewBox="0 0 560 250" role="img" aria-label="Technical schematic of a scramjet inlet, combustor, and exhaust nozzle">
+          <defs>
+            <linearGradient id="mach-field" x1="0" x2="1"><stop offset="0" stop-color="#5b93c9" stop-opacity=".05"/><stop offset=".58" stop-color="#5b93c9" stop-opacity=".2"/><stop offset="1" stop-color="#e2823f" stop-opacity=".16"/></linearGradient>
+            <marker id="flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#e2823f"/></marker>
+          </defs>
+          <g fill="none" stroke="#5b93c9" stroke-width="1.5">
+            <path d="M38 78H132L196 112H392L490 62H526"/>
+            <path d="M38 172H132L196 138H392L490 188H526"/>
+            <path d="M196 112V138M392 112V138" stroke-dasharray="4 5"/>
+            <path d="M28 125H535" stroke-dasharray="8 7" opacity=".45"/>
+            <path d="M76 93L132 125L76 157M114 93L164 125L114 157" opacity=".45"/>
+          </g>
+          <path d="M39 79H132L196 112H392L490 63H526V187H490L392 138H196L132 171H39Z" fill="url(#mach-field)"/>
+          <g fill="none" stroke="#e2823f" stroke-width="1.2" marker-end="url(#flow-arrow)">
+            <path d="M45 108H120"/><path d="M218 125H304"/><path d="M414 125H500"/>
+          </g>
+          <g fill="#5b93c9" font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="1"><text x="45" y="53">SUPERSONIC INLET</text><text x="223" y="96">COMBUSTOR</text><text x="409" y="45">EXPANSION NOZZLE</text><text x="205" y="213">MACH / PRESSURE / TEMPERATURE CONTOURS</text></g>
+          <text x="244" y="132" fill="#e2823f" font-family="JetBrains Mono, monospace" font-size="9">FUEL + AIR</text>
+        </svg>
+      </div>
+      <div class="sheet-body">
+        <h3>Scramjet Engine ANSYS Analysis</h3>
+        <p>Planned compressible-flow study of a supersonic-combustion ramjet, covering geometry development, mesh independence, boundary conditions, and Mach, pressure, and temperature contours.</p>
+      </div>
+      <div class="sheet-specs">
+        <div class="spec"><div class="spec-label">SOFTWARE</div><div class="spec-value">ANSYS Fluent</div></div>
+        <div class="spec"><div class="spec-label">DOMAIN</div><div class="spec-value">Compressible CFD</div></div>
+        <div class="spec"><div class="spec-label">OUTPUTS</div><div class="spec-value">Mach, P, T</div></div>
+        <div class="spec"><div class="spec-label">STATUS</div><div class="spec-value">Planned</div></div>
+      </div>
+      <div class="coming-note">ANALYSIS QUEUED — PROJECT PAGE IN DEVELOPMENT</div>
+    </article>
 
   </div>
 </section>
@@ -653,7 +693,7 @@
 
   <div class="about-grid">
     <div class="reveal">
-      <p>I'm <strong>Soham (John) Jagani</strong>, a mechanical engineering student at <strong>NC State University</strong>, graduating May 2027, with a minor in Business Administration.</p>
+      <p>I'm <strong>Soham Jagani</strong>, a mechanical engineering student at <strong>NC State University</strong>, graduating May 2027, with a minor in Business Administration.</p>
       <p>My work spans CAD modeling, FEA, and controls — from process engineering and project management internships to undergraduate research in soft-body robotics. I like problems that move between design and analysis: building a part, then proving it holds up.</p>
       <p>This page is a running log of that work, updated as new sheets get added to the set.</p>
     </div>
